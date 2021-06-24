@@ -1,11 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Heading from "./time";
+import App from "./App";
 
 
-ReactDOM.render(
-  <div>
-    <Heading />
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />,document.getElementById("root"));
