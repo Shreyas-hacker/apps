@@ -11,7 +11,7 @@ function App(){
         <div>
             <Header />
             <CreateArea />
-            <Note />
+            <Note title="Note title" content="Note content"/>
             <Footer />
         </div>
     );
