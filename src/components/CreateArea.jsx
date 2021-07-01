@@ -26,7 +26,7 @@ function CreateArea(props) {
   }
   return (
     <div>
-      <form>
+      <form className="create-note">
         <input name="title" value={note.title}placeholder="Title" onChange={handleChange}/>
         <textarea name="content" value={note.content}placeholder="Take a note..." rows="3" onChange={handleChange}/>
         <button onClick={onSubmit}>Add</button>
