@@ -14,12 +14,20 @@ function App(){
             return [...prevNotes, newNotes];
         })
     }
+
+    function deleteNote(id){
+        setNote(prevNotes=>{
+            return prevNotes.filter((notes,index)=>{
+                return index !== id;
+            }) 
+        })
+    }
     return (
         <div>
             <Header />
             <CreateArea addNote={addNote}/>
             {note.map((oneNote,index)=>{
-                return <Note key={index} title={oneNote.title} content={oneNote.content} />
+                return <Note key={index} id={index} title={oneNote.title} content={oneNote.content} onDelete={deleteNote}/>
             })}
             <Footer />
         </div>
