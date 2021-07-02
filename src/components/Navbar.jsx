@@ -6,7 +6,7 @@ import NotesIcon from '@material-ui/icons/Notes';
 
 function Navbar(){
     return(
-    <div>
+    <div className="navbar">
         <ul>
             <li><NavLink to='/'><NotesIcon />Notes</NavLink></li>
             <li><NavLink to='/archive'><ArchiveIcon />Archive</NavLink></li>
