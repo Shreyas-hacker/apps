@@ -5,13 +5,14 @@ import ArchiveIcon from '@material-ui/icons/Archive';
 import NotesIcon from '@material-ui/icons/Notes';
 
 function Navbar(){
+    return(
     <div>
         <ul>
             <li><NavLink to='/'><NotesIcon />Notes</NavLink></li>
             <li><NavLink to='/archive'><ArchiveIcon />Archive</NavLink></li>
             <li><NavLink to='/trash'><Delete />Trash</NavLink></li>
         </ul>
-    </div>
+    </div>)
 }
 
 export default Navbar;
