@@ -1,13 +1,11 @@
 //3. Create a Header.jsx component that renders a <header> element
 //to show the Keeper App name in an <h1>
 import React from "react";
-import HighlightIcons from "@material-ui/icons/Highlight";
+import Navbar from "./Navbar";
 
 function Header(){
     return(
-        <header>
-            <h1><HighlightIcons />Keeper</h1>
-        </header>
+        <Navbar />
     );
 }
 
