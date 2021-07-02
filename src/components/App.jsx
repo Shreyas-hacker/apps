@@ -4,7 +4,7 @@ import Header from "./Header";
 import Note from "./Note";
 import Footer from "./Footer";
 import CreateArea from "./CreateArea";
-
+import Navbar from "./Navbar";
 
 function App(){
     const [note, setNote] = React.useState([]);
@@ -25,6 +25,7 @@ function App(){
     return (
         <div>
             <Header />
+            <Navbar />
             <CreateArea addNote={addNote}/>
             {note.map((oneNote,index)=>{
                 return <Note key={index} id={index} title={oneNote.title} content={oneNote.content} onDelete={deleteNote}/>

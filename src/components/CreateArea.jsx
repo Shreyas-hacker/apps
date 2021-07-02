@@ -31,7 +31,9 @@ function CreateArea(props) {
   const [isClicked, setClick] = React.useState(false);
 
   function handleClick(){
-    setClick(true);
+    setClick(prevValue=>{
+      return !prevValue;
+    });
   }
   return (
     <div>
