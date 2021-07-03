@@ -104,6 +104,9 @@ header .navbar ul li a{
   text-align: center;
   margin-top: 20px;
 }
+header .navbar ul li:hover{
+  opacity: 0.2;
+}
 header .current{
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid white; 
 }

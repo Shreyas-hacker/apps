@@ -1,6 +1,6 @@
 //2. Create a App.jsx component..
 import React from "react";
-import Header from "./Header";
+import Navbar from "./Navbar";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 
@@ -22,7 +22,7 @@ function App(){
     }
     return (
         <div>
-            <Header />
+            <Navbar/>
             <CreateArea addNote={addNote}/>
             {note.map((oneNote,index)=>{
                 return <Note key={index} id={index} title={oneNote.title} content={oneNote.content} onDelete={deleteNote}/>
