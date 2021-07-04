@@ -48,11 +48,39 @@ header h1 {
   float: right;
   margin-right: 10px;
   color: #f5ba13;
+  background-color: none;
   border: none;
   width: 36px;
   height: 36px;
   cursor: pointer;
   outline: none;
+}
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+/* box for title text */
+[data-title]:after {
+  content: attr(data-title);
+  /* position for title view box */
+  position: absolute;
+  bottom: -1.6em;  	
+  left: 100%;
+  z-index: 99999;
+  visibility: hidden;
+  /* optional */
+  white-space: nowrap;
+  /* stilization */
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px;
+}
+[data-title] {
+  position: relative;
 }
 
 form.create-note {
