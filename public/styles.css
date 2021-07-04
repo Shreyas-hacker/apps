@@ -7,8 +7,7 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
-  background-image: url("https://transparenttextures.com/patterns/white-wall.png");
+  background: white;
 }
 
 header {
@@ -26,11 +25,14 @@ header h1 {
 .note {
   background: #fff;
   border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
+  border: 1px solid #ccc;
   padding: 10px;
   width: 240px;
   margin: 16px;
   float: left;
+}
+.note:hover{
+  box-shadow: 0 2px 5px #ccc;
 }
 .note h1 {
   font-size: 1.1em;
@@ -43,15 +45,15 @@ header h1 {
   word-wrap: break-word;
 }
 
-.note button {
+.note .buttons {
   position: relative;
   float: right;
-  margin-right: 10px;
-  color: #f5ba13;
+  margin: 10px;
+  color: black;
   background-color: none;
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   outline: none;
 }
@@ -64,7 +66,6 @@ header h1 {
 [data-title]:after {
   content: attr(data-title);
   /* position for title view box */
-  position: absolute;
   bottom: -1.6em;  	
   left: 100%;
   z-index: 99999;
@@ -72,11 +73,12 @@ header h1 {
   /* optional */
   white-space: nowrap;
   /* stilization */
-  width: 100px;
-  background-color: black;
+  width: 120px;
+  background-color: #4d4d4d;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
+  font-size: 12px;
+  padding: 5px;
   border-radius: 4px;
 }
 [data-title] {
@@ -139,11 +141,48 @@ header .current{
   border-bottom: 4px solid white; 
 }
 
-h3{
+.zM6fo-Ne3sFf {
+  color: #202124;
+  cursor: default;
+  display: flex;
+  font-size: 17px;
   font-style: italic;
-  text-align: center;
-  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 8px;
 }
+
+.Q0hgme-fmcmS-LgbsSe.fmcmS-LgbsSe-v3pZbf:not(.VIpgJd-LgbsSe-OWB6Me) {
+  color: #1a73e8;
+}
+
+.zM6fo-Ne3sFf-xFQqWe-LgbsSe {
+  bottom: 0;
+  font-style: normal;
+  margin-left: 16px;
+  position: relative;
+}
+.Q0hgme-fmcmS-LgbsSe {
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: .01785714em;
+  font-family: 'Google Sans',Roboto,Arial,sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  height: 36px;
+  padding: 8px 24px;
+  border-radius: 4px;
+}
+.Q0hgme-LgbsSe {
+  cursor: pointer;
+  display: inline-block;
+  outline: none!important;
+}
+
 .neVct-Ne3sFf-fmcmS {
   color: #80868b;
   cursor: default;

@@ -17,8 +17,8 @@ function Note(props){
         <div className="note" onMouseEnter={handleMouse} onMouseLeave={mousehandle}>
             <h1>{props.title}</h1>
             <p>{props.content}</p>
-            {isMouse ? <button onClick={()=>props.onDelete(props.id)}><DeleteIcon /></button> :null}
-            {isMouse ? <button><ArchiveIcon /></button> : null}
+            {isMouse ? <div className="buttons" role="button" data-title= "Delete" onClick={()=>props.onDelete(props.id)}><DeleteIcon /></div> :null}
+            {isMouse ? <div className="buttons" role="button" data-title= "Archive"><ArchiveIcon /></div> : null}
         </div>
     );
 }

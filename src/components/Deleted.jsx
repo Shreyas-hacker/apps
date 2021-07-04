@@ -15,8 +15,8 @@ function Deleted(props){
             <div className="note" onMouseEnter={handleMouse} onMouseLeave={mousehandle} >
                 <h1>{props.title}</h1>
                 <p>{props.content}</p>
-                {mouse ? <button onClick={()=>props.get(props.id)} data-title= "Restore"><RestoreFromTrashIcon />
-                </button> : null}
+                {mouse ? <div role="button" className="buttons" onClick={()=>props.get(props.id)} data-title= "Restore"><RestoreFromTrashIcon />
+                </div> : null}
             </div>
         </div>
     )
