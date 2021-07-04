@@ -43,8 +43,10 @@ function Main(){
                 })}
         </Route>
         <Route exact path="/trash">
-            {delNote.map((oneDel, index)=>{
-                return <Deleted key={index} id={index} title={oneDel.title} content={oneDel.content} get={getBack}/>
+            <h3>Notes are deleted after seven days</h3>
+            {delNote.length === 0 ? <div class="neVct-Ne3sFf-fmcmS">No notes in Trash</div> :
+                delNote.map((oneDel, index)=>{
+                    return <Deleted key={index} id={index} title={oneDel.title} content={oneDel.content} get={getBack} array={delNote}/>
             })}
         </Route>
     </Switch>
