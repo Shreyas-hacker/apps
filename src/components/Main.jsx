@@ -34,6 +34,9 @@ function Main(){
             return [...prevNotes, delNote[id]];
         })
     }
+    function deleteArray(){
+        setDel([])
+    }
     return(
     <Switch>
         <Route exact path="/">
@@ -46,7 +49,7 @@ function Main(){
             <div class="zM6fo-Ne3sFf">
                 Notes in Trash are deleted after 7 days.
                 {delNote.length !== 0 ? 
-                <div role="button" class="Q0hgme-LgbsSe Q0hgme-fmcmS-LgbsSe zM6fo-Ne3sFf-xFQqWe-LgbsSe fmcmS-LgbsSe-v3pZbf VIpgJd-LgbsSe">
+                <div role="button" class="Q0hgme-LgbsSe Q0hgme-fmcmS-LgbsSe zM6fo-Ne3sFf-xFQqWe-LgbsSe fmcmS-LgbsSe-v3pZbf VIpgJd-LgbsSe" onClick={deleteArray}>
                     Empty Trash
                 </div> :null}
             </div>
