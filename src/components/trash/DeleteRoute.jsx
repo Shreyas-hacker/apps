@@ -1,5 +1,6 @@
 import React from "react";
 import Deleted from "./Deleted";
+import Modal from "../Modal";
 
 function DeleteRouter(props){
     return(
@@ -7,15 +8,10 @@ function DeleteRouter(props){
             <div class="zM6fo-Ne3sFf">
                 Notes in Trash are deleted after 7 days.
                 {props.array.length !== 0 ? 
-                <button id="myBtn" class="Q0hgme-LgbsSe Q0hgme-fmcmS-LgbsSe zM6fo-Ne3sFf-xFQqWe-LgbsSe fmcmS-LgbsSe-v3pZbf VIpgJd-LgbsSe">
+                <div id="myBtn" class="Q0hgme-LgbsSe Q0hgme-fmcmS-LgbsSe zM6fo-Ne3sFf-xFQqWe-LgbsSe fmcmS-LgbsSe-v3pZbf VIpgJd-LgbsSe">
                     Empty Trash
-                </button> :null}
-                <div id="myModal" class="modal">
-                    <div class ="modal-content">
-                        <span class="close">&times;</span>
-                        <p>Empty trash? All notes in Trash will be permanently deleted.</p>
-                    </div>
-                </div>
+                </div> :null}
+                <Modal />
             </div>
             {props.array.length === 0 ? 
             <div class="neVct-Ne3sFf-fmcmS">
