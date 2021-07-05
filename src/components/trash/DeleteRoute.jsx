@@ -3,15 +3,23 @@ import Deleted from "./Deleted";
 import Modal from "../Modal";
 
 function DeleteRouter(props){
+    const[show, setShow] = React.useState(false);
+
+    function showing(){
+        setShow(true);
+    }
+    function close(){
+        setShow(false);
+    }
     return(
         <div>
             <div class="zM6fo-Ne3sFf">
                 Notes in Trash are deleted after 7 days.
                 {props.array.length !== 0 ? 
-                <div id="myBtn" class="Q0hgme-LgbsSe Q0hgme-fmcmS-LgbsSe zM6fo-Ne3sFf-xFQqWe-LgbsSe fmcmS-LgbsSe-v3pZbf VIpgJd-LgbsSe">
+                <button onClick={showing} className="Q0hgme-LgbsSe Q0hgme-fmcmS-LgbsSe zM6fo-Ne3sFf-xFQqWe-LgbsSe fmcmS-LgbsSe-v3pZbf VIpgJd-LgbsSe" >
                     Empty Trash
-                </div> :null}
-                <Modal />
+                </button> :null}
+                <Modal show={show} onClose={close}/>
             </div>
             {props.array.length === 0 ? 
             <div class="neVct-Ne3sFf-fmcmS">
