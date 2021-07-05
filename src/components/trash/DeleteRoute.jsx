@@ -7,9 +7,15 @@ function DeleteRouter(props){
             <div class="zM6fo-Ne3sFf">
                 Notes in Trash are deleted after 7 days.
                 {props.array.length !== 0 ? 
-                <div role="button" class="Q0hgme-LgbsSe Q0hgme-fmcmS-LgbsSe zM6fo-Ne3sFf-xFQqWe-LgbsSe fmcmS-LgbsSe-v3pZbf VIpgJd-LgbsSe" onClick={props.delete}>
+                <button id="myBtn" class="Q0hgme-LgbsSe Q0hgme-fmcmS-LgbsSe zM6fo-Ne3sFf-xFQqWe-LgbsSe fmcmS-LgbsSe-v3pZbf VIpgJd-LgbsSe">
                     Empty Trash
-                </div> :null}
+                </button> :null}
+                <div id="myModal" class="modal">
+                    <div class ="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Empty trash? All notes in Trash will be permanently deleted.</p>
+                    </div>
+                </div>
             </div>
             {props.array.length === 0 ? 
             <div class="neVct-Ne3sFf-fmcmS">
