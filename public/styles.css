@@ -46,16 +46,24 @@ header h1 {
 }
 
 .note .buttons {
-  position: relative;
+  position: static;
   float: right;
+  justify-content: center;
+  align-items: center;
+  display: block;
   margin: 10px;
   color: black;
   background-color: none;
   border: none;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
   cursor: pointer;
   outline: none;
+}
+.note .buttons:hover{
+  background-color: #ccc;
+  border-radius: 16px;
 }
 [data-title]:hover:after {
   opacity: 1;
