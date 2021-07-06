@@ -7,7 +7,18 @@ import DeleteRouter from "./trash/DeleteRoute";
 function Main(){
     const [note, setNote] = React.useState([]);
     const [delNote, setDel] = React.useState([]);
+    const[show, setShow] = React.useState(false);
 
+    function showing(){
+        setShow(true);
+    }
+    function close(){
+        setShow(false);
+    }
+    function deleteArray(){
+        setDel([]);
+        setShow(false);
+    }
     function addNote(newNotes){
         setNote((prevNotes)=>{
             return [...prevNotes, newNotes];
@@ -34,9 +45,7 @@ function Main(){
             return [...prevNotes, delNote[id]];
         })
     }
-    function deleteArray(){
-        setDel([])
-    }
+    
     return(
     <Switch>
         <Route exact path="/">
@@ -46,7 +55,7 @@ function Main(){
                 })}
         </Route>
         <Route exact path="/trash">
-            <DeleteRouter array={delNote} delete={deleteArray} get={getBack}/>
+            <DeleteRouter array={delNote} delete={deleteArray} get={getBack} show={showing} element={show} closing={close}/>
         </Route>
     </Switch>
     )

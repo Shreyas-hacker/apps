@@ -13,7 +13,7 @@ function Modal(props){
                 </div>
                 <div className="modal-footer">
                     <div role="button" onClick={props.onClose} className="closebutton">Cancel</div>
-                    <div role="button" className="trashbutton">Empty Trash</div>
+                    <div role="button" className="trashbutton" onClick={props.empty}>Empty Trash</div>
                 </div>
             </div>
         </div>
