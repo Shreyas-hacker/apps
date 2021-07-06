@@ -7,7 +7,7 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #f3f3f3;
+  background: whitesmoke;
 }
 
 header {
@@ -221,18 +221,53 @@ header .current{
   justify-content: center;
 }
 .modal-content{
-  width: 500px;
+  width: 400px;
+  height: 100px;
   background-color: #fff;
   font-family: 'Google Sans',Roboto,Arial,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: small;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);;
 }
-.modal-header, .modal-footer{
+.modal-footer{
   padding: 10px;
 }
 
 .modal-title{
   margin: 0;
+  text-align: center;
 }
 
 .modal-body{
   padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.modal-footer .closebutton{
+  float: right;
+  margin: 10px;
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  width: 80px;
+}
+.modal-footer .closebutton:hover{
+  background-color: rgba(240, 239, 241, 0.3);
+  border-radius: 4px;
+}
+.modal-footer .trashbutton{
+  float: right;
+  margin: 10px;
+  cursor: pointer;
+  color: #1a73e8;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  width: 100px;
+}
+.modal-footer .trashbutton:hover{
+  background-color: rgba(0,0,255,0.1);
+  border-radius: 4px;
+
 }

@@ -8,14 +8,12 @@ function Modal(props){
     return(
         <div className="modal" onClick={props.onClose}>
             <div className="modal-content" onClick={e=>e.stopPropagation()}>
-                <div className="modal-header">
-                    <h4>Clear Trash</h4>
-                </div>
                 <div className="modal-body">
-                    Clear Trash? All notes would be deleted
+                    Empty trash? All notes in Trash will be permanently deleted.
                 </div>
                 <div className="modal-footer">
-                    <button onClick={props.onClose} className="button">Close</button>
+                    <div role="button" onClick={props.onClose} className="closebutton">Cancel</div>
+                    <div role="button" className="trashbutton">Empty Trash</div>
                 </div>
             </div>
         </div>
