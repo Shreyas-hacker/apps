@@ -3,6 +3,7 @@ import {Switch, Route} from "react-router-dom";
 import CreateArea from "./CreateArea";
 import Note from "./Note";
 import DeleteRouter from "./trash/DeleteRoute";
+import ArchiveRouter from "./Archive/ArchiveRouter";
 
 function Main(){
     const [note, setNote] = React.useState([]);
@@ -56,6 +57,9 @@ function Main(){
         </Route>
         <Route exact path="/trash">
             <DeleteRouter array={delNote} delete={deleteArray} get={getBack} show={showing} element={show} closing={close}/>
+        </Route>
+        <Route exact="/archive">
+            <ArchiveRouter />
         </Route>
     </Switch>
     )
