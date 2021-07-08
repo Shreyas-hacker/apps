@@ -18,7 +18,7 @@ function Note(props){
             <h1>{props.title}</h1>
             <p>{props.content}</p>
             {isMouse ? <div className="buttons" role="button" data-title= "Delete" onClick={()=>props.onDelete(props.id)}><DeleteIcon /></div> :null}
-            {isMouse ? <div className="buttons" role="button" data-title= "Archive"><ArchiveIcon /></div> : null}
+            {isMouse ? <div className="buttons" role="button" data-title= "Archive" onClick={()=>props.onArchive(props.id)}><ArchiveIcon /></div> : null}
         </div>
     );
 }
